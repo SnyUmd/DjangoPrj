@@ -12,5 +12,9 @@ from . import views
 app_name = 'blog'
 
 urlpatterns = {
-    path('', views.IndexView.as_view(), name='index'),
+    path('index/', views.IndexView.as_view(), name='index'),
+    path('contact/', views.ContactView.as_view(), name='contact'),
+    
+    path('indexV/', views.IndexV, name='index'),#関数ベースビューを実行
+    path('contactV/', views.ContactV, name='contact'),#関数ベースビューを実行
 }
